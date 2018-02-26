@@ -15,5 +15,4 @@ int main()
     printf ("p ");
     printf ("\n");
     printf("1 r n b q k b n r\n");
-    system("PAUSE");
 }
