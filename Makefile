@@ -1,2 +1,2 @@
 all:
-g++ main.c
+	g++ chess.cpp -Wall
