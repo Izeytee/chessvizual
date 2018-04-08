@@ -1,5 +1,7 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
 #ifndef _MYPROJECT_board_cpp
 #define _MYPROJECT_board_cpp
 void board(char place[][8])
@@ -30,5 +32,32 @@ void board(char place[][8])
         for (int i = 0; i<8; i++)
         place[j][i] = ' ';
     }
+}
+
+void CheckIn(char Move[], char place[][8])
+{
+     if
+    (
+     (strlen(Move)==5) && (Move[2]=='-') &&((int)(Move[1])>48) && ((int)(Move[1])<57) &&((int)(Move[4])>48) && ((int)(Move[4])<57) &&
+     ((int)(Move[0])<73) && ((int)(Move[0])>64) && ((int)(Move[3])<73) && ((int)(Move[3])>64)
+    )
+    {
+        int c1 = (int)(Move[0]) - 65;
+        int c2 = (int)(Move[3]) - 65;
+        int n1 = (int)(Move[1]) - 49;
+        int n2 = (int)(Move[4]) - 49;
+        char t = place[n1][c1];
+        place[n1][c1] = place[n2][c2];
+        place[n2][c2] = t;
+        for (int i = 0; i<8; i++)
+        {
+           printf("%d ",i+1);
+           for (int j = 0; j < 8; j++)
+           printf("%c ",place[i][j]);
+           printf("\n");
+        }
+        printf("  A B C D E F G H\n");
+    }
+    else puts("Incorrect input");
 }
 #endif
