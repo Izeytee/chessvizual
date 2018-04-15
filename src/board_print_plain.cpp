@@ -1,6 +1,6 @@
 #include <stdio.h>
-#ifndef _MYPROJECT_board_print_plain_cpp
-#define _MYPROJECT_board_print_plain_cpp
+#include "board_print_plain.h"
+
 void board_print_plain(char place[][8])
 {
     FILE *pf; 
@@ -10,11 +10,11 @@ void board_print_plain(char place[][8])
         fprintf(pf,"%d ",i+1);
         for (int j = 0; j < 8; j++)
         {
-           fprintf(pf,"%c ",place[i][j]);
+           fprintf(pf, "%c ", place[i][j]);
         }
-        fprintf(pf,"\n");
+        fprintf(pf, "\n");
     }
-    fprintf(pf,"  A B C D E F G H\n");
+    fprintf(pf, "  A B C D E F G H\n");
     fclose(pf);
 }
-#endif
+

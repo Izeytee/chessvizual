@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <board.cpp>
 #include <board_print_plain.cpp>
+#include "board.h"
+#include "board_print_plain.h"
+
 int main()
 {   
     char place[8][8];
@@ -10,7 +13,7 @@ int main()
         printf("%d ",i+1);
         for (int j = 0; j < 8; j++)
         {
-           printf("%c ",place[i][j]);
+           printf("%c ", place[i][j]);
         }
         printf("\n");
     }
@@ -19,7 +22,7 @@ int main()
     char Move[5];
     while(1)
     {
-            scanf("%s",Move);
+            scanf("%s", Move);
             CheckIn(Move, place);
             board_print_plain(place);
     }
