@@ -35,6 +35,13 @@ void board(char place[][8])
 
 void CheckIn(char Move[], char place[][8])
 {
+  FILE *newFile;
+  newFile = fopen("Move.txt","w");
+  for (int i = 0; i<5; i++)
+    {
+      fprintf(newFile, "%c", Move[i]);
+    }
+  fclose(newFile);
      if ((strlen(Move)==5) && (Move[2]=='-')
      && ((int)(Move[1])>48) && ((int)(Move[1])<57) 
      && ((int)(Move[4])>48) && ((int)(Move[4])<57)
