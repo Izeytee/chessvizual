@@ -1,6 +1,12 @@
 CC = g++
 CFLAGS  = -Wall -Werror
 
+build:
+	mkdir build
+
+bin:
+	mkdir bin
+
 .PHONY: clean
 
 all: bin/chessvizual
