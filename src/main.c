@@ -2,7 +2,6 @@
 
 #include "board.h"
 #include "board_print_plain.h"
-
 int main()
 {   
     char place[8][8];
@@ -15,6 +14,7 @@ int main()
             scanf("%s", Move);
             CheckIn(Move, place);
             board_print_plain(place);
+            board_print_plain_Move(Move);
     }
 }
 

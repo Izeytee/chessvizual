@@ -4,11 +4,12 @@
 void board_print_plain(char place[][8])
 {
     FILE *pf; 
+    int i, j;
     pf=fopen("new1.txt","w");
-    for (int i = 0; i<8; i++)
+    for (i = 0; i<8; i++)
     {
         fprintf(pf,"%d ",i+1);
-        for (int j = 0; j < 8; j++)
+        for (j = 0; j < 8; j++)
         {
            fprintf(pf, "%c ", place[i][j]);
         }
@@ -16,5 +17,13 @@ void board_print_plain(char place[][8])
     }
     fprintf(pf, "  A B C D E F G H\n");
     fclose(pf);
+}
+
+void board_print_plain_Move(char Move[])
+{
+     FILE *pf;
+     pf=fopen("new1.txt","a");
+     fprintf(pf, "%s\n",Move);
+     fclose(pf);
 }
 
