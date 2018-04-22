@@ -52,7 +52,7 @@ void board(char place[][8])
 bool CheckInMove(char Move[], char place[][8])
 {
      int c1 = (int)(Move[0]) - 65;
-     int c2 = (int)(Move[3]) - 65;
+     //int c2 = (int)(Move[3]) - 65;
      int n1 = (int)(Move[1]) - 49;
      int n2 = (int)(Move[4]) - 49;
      char figure = place[n1][c1];
