@@ -3,5 +3,7 @@
 
 void board(char place[][8]);
 void CheckIn(char Move[], char place[][8]);
+void printboard(char place[][8]);
+bool CheckInMove(char Move[], char place[][8]);
 
 #endif
